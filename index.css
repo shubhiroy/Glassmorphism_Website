@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5;
+}
+
+body  {
+    font-size:  1.6rem;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.blurred-wrapper{
+    height: 100vh;
+    background:  url("./images/guitar3.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    /* animation: hue 10s infinite alternate; */
+}
+
+.blurred-wrapper::after {
+    content: "";
+    width: 96%;
+    height: 93%;
+    /* background: inherit; */
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    z-index: -1;
+    /* filter:blur(2rem) ;  */
+    box-shadow: 0 2.5rem 5.5rem rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    perspective: 500px;
+    /* background: rgba(255, 255, 255, 0.05); */
+    backdrop-filter: blur(1rem);
+    /* transform: scale(0.5); */
+    border-radius: 2rem;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    /* padding: 0 1.15rem; */
+}
+.main-header {
+    height: 12rem;
+    padding: 0 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+.logo {
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: cursive;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    border: 2px solid rgba(255,255,255, 0.5);
+    border-radius: 2.5rem;
+    color: #fff;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.btn:hover {
+    background-color: rgb(241, 220, 220);
+    color: rgb(87, 85, 85);
+}
+
+.btn:active { 
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+} 
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 12rem);
+    padding: 0 1.15rem;
+}
+
+.content-wrapper{
+    max-width: 40rem;
+    transform: translateY(-4rem);
+    transform:translateX(5rem)
+}
+
+.tagline {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.message {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+}
+
+@keyframes hue {
+    from{
+        filter: hue-rotate(0);
+    }
+
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .btn{
+        padding: 1.5rem 3rem;
+    }
+
+    .content-wrapper{
+        max-width: 60rem;
+    }
+
+    .title {
+        font-size: 6rem;
+    }
+
+    .message{
+        font-size: 2rem;
+    }
+}
