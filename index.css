@@ -26,7 +26,7 @@ a{
     position: relative;
     z-index: 1;
     overflow: hidden;
-    /* animation: hue 10s infinite alternate; */
+    animation: hue 10s infinite alternate;
 }
 
 .blurred-wrapper::after {
